@@ -1,0 +1,25 @@
+{
+    "name": "blackkat98/tree-model",
+    "keywords": [
+        "laravel",
+        "tree",
+        "model"
+    ],
+    "type": "composer-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "blackkat98",
+            "email": "nam.th.200698@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "BlackKat\\TreeModel\\": "src/"
+        }
+    },
+    "require": {
+        
+    }
+}
