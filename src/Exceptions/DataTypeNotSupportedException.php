@@ -1,24 +1,20 @@
 <?php
 
-namespace BlackKat\TreeModel\Exception;
+namespace BlackKat\TreeModel\Exceptions;
 
 use Exception;
-use BlackKat\TreeModel\KeyBase\Builder;
 
 class DataTypeNotSupportedException extends Exception
 {
-    protected $oddVariable;
-
-    public function __construct($oddVariable, $funcName, $className)
+    public function __construct($oddVariable)
     {
         $oddType = gettype($oddVariable);
-        $message = "Function $funcName of class $className requires " ;
-
-        parent::__construct($message, $code, $previous);
+        $message = "Tree data set must contain only arrays or objects. $oddType given.";
+        parent::__construct($message, 0, null);
     }
 
     public function __toString()
     {
-        
+        return __CLASS__ . ": $this->message";
     }
 }
